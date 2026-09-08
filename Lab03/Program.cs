@@ -1,6 +1,10 @@
-﻿using System.Runtime.Intrinsics.Arm;
-using System.Xml;
-
+﻿/*
+* Student ID : 1690704828
+* Name       : Rachta Chingthonkom
+* Section    : 129D
+* No.        :30
+* Course     : GI113 Computer Programming (GI)
+*/
 namespace Lab03
 {
     internal class Program
@@ -17,47 +21,46 @@ namespace Lab03
             float attackPower = 42.5f;
             double critMultiplier = 1.75;
             bool isBoss = true;
-            
+
             Console.WriteLine("===== KIRIN SAVE CONVERTER =====");
-            Console.WriteLine($"Boss Name: {bossName}");
+            Console.WriteLine($"Name: {bossName}");
             Console.WriteLine($"Rank: {rank}");
-            Console.WriteLine($"Level: {level} / {MaxLevel}" +
-                $"\nHP: {currentHp} / {maxHp}" +
-                $"\nAttack Power: {attackPower}" +
-                $"\nCritical Multiplier: {critMultiplier}" +
-                $"\nIs Boss: {isBoss}");
+            Console.WriteLine($"Level: {level} / {MaxLevel}");
+            Console.WriteLine($"HP: {currentHp} / {maxHp}");
+            Console.WriteLine($"Attack Power: {attackPower}");
+            Console.WriteLine($"Crit Multiplier: {critMultiplier}");
+            Console.WriteLine($"Is Boss: {isBoss}");
+            Console.WriteLine();
 
 
-            // Implicit Conversion: currentHp (int) --> double
-            Console.WriteLine("\n----- Implicit Conversion: HP as double -----");
-            double currentHpDouble = currentHp; // (double) currentHpdouble = (int)currentHp
+            // Implicit Conversion
+            Console.WriteLine("----- Implicit Conversion: HP as double -----");
+            double currentHpDouble = currentHp;
             Console.WriteLine($"HP (double): {currentHpDouble}");
+            Console.WriteLine();
 
-
-            // Calculate Percent -->> double
-            Console.WriteLine("\n----- Exact HP Percent (no integer truncation)-----");
+            // Calculate Exact HP Percent
+            Console.WriteLine("----- Exact HP Percent (no integer truncation) -----");
             double hpPercentExact = currentHpDouble * 100 / maxHp;
             Console.WriteLine($"HP Percent (exact): {hpPercentExact}%");
+            Console.WriteLine();
 
+            // Explicit Cast
+            Console.WriteLine("----- Explicit Cast: Attack Power -> Display Int -----");
+            int attackDisplay = (int)attackPower;
+            Console.WriteLine($"Attack Power (int cast): {attackDisplay}");
+            Console.WriteLine();
 
-            // Explicit Conversion Cast attackPower (float) --> int
-            Console.WriteLine("\n----- Explicit Conversion: Attack Power as int -----");
-            Console.WriteLine($"Attack Power (float): {attackPower}");
-            int attackPowerInt = (int)attackPower; // Explicit Conversion Cast
-            Console.WriteLine($"Attack Power (int): {attackPowerInt}");
+            // Cast vs Convert
+            Console.WriteLine("----- Cast vs Convert: Crit Multiplier -----");
+            int critCast = (int)critMultiplier;
+            int critConvert = Convert.ToInt32(critMultiplier);
+            Console.WriteLine($"Crit Multiplier (int cast): {critCast}");
+            Console.WriteLine($"Crit Multiplier (Convert rounded): {critConvert}");
 
-
-
-            //Cast vs. Convert critMultiplier (double) --> int
-            Console.WriteLine("\n----- Cast vs. Convert: Critical Multiplier as int -----");
-            Console.WriteLine($"Critical Multiplier (double): {critMultiplier}");
-            int critMultiplierInt = (int)critMultiplier;
-            Console.WriteLine($"Critical Multiplier (int - Cast): {critMultiplierInt}");
-            int critMultiplierIntConverted = Convert.ToInt32(critMultiplier);
-            Console.WriteLine($"Critical Multiplier (int - Convert): {critMultiplierIntConverted}");
 
 
         }
     }
-    }
+    
 }
