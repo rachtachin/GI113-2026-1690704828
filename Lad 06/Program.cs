@@ -5,60 +5,78 @@
 * No.        :30
 * Course     : GI113 Computer Programming (GI)
 */
-namespace Lad_06
+namespace Lab_06
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             //Game name The Demon Hunter VS Chicken
-            int playerhp = 100;
-            int enemyhp = 100;
-            int knife = 10;
-            int pistol = 20;
-            int chicken = 100;
-            int chickenfireHP = 50;
+            int playerHp = 100;
+            int enemyHp = 100;
+            int knifeDamage = 25;
+            int pistolDamage = 40;
+            int chickenDamage = 15;
+            int friedChickenHeal = 30;
 
 
-            Console.WriteLine("GAME TITLE :Welcome to The Demon Hunter VS Chicken!");
-            Console.WriteLine("ACTION 1: Attack A Demon with a Knife");
-            Console.WriteLine("ACTION 2: Attack A Demon with a Pistol");
-            Console.WriteLine("ACTION 3: Attack A Chicken with a Chicken");
-            Console.WriteLine("ACTION 4: Eat a Chickenfire to regain health");
+            Console.WriteLine("====================================");
+            Console.WriteLine("       DEMON HUNTER VS CHICKEN");
+            Console.WriteLine("====================================");
+            Console.WriteLine($"Player HP : {playerHp}");
+            Console.WriteLine($"Demon HP  : {enemyHp}");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("ACTION 1 : Attack Demon with Knife");
+            Console.WriteLine("ACTION 2 : Attack Demon with Pistol");
+            Console.WriteLine("ACTION 3 : Attack Chicken");
+            Console.WriteLine("ACTION 4 : Eat Chicken and Heal");
+            Console.WriteLine("------------------------------------");
+            Console.Write("Choose your action (1-4): ");
 
-            Console.WriteLine("Choose your action (1-4):");
             bool inputValid = int.TryParse(Console.ReadLine(), out int action);
+
+            Console.WriteLine();
 
             if (!inputValid || action < 1 || action > 4)
             {
-                Console.WriteLine("Invalid input, please action between 1-4 only!");
+                Console.WriteLine("Invalid action. Please choose 1-4.");
             }
             else if (action == 1)
             {
-                enemyhp -= knife;
-                Console.WriteLine($"You attacked the Demon with a Knife! Enemy HP: {enemyhp}");
+                enemyHp -= knifeDamage;
+
+                Console.WriteLine("You attack the Demon with a Knife!");
+                Console.WriteLine($"Demon HP : {enemyHp}");
             }
             else if (action == 2)
             {
-                enemyhp -= pistol;
-                Console.WriteLine($"You attacked the Demon with a Pistol! Enemy HP: {enemyhp}");
+                enemyHp -= pistolDamage;
+
+                Console.WriteLine("You shoot the Demon with a Pistol!");
+                Console.WriteLine($"Demon HP : {enemyHp}");
             }
             else if (action == 3)
             {
-                chicken -= 10;
-                Console.WriteLine($"You attacked the Chicken! Chicken HP: {chicken}");
+                playerHp -= chickenDamage;
+
+                Console.WriteLine("You attack the Chicken!");
+                Console.WriteLine("The Chicken fights back!");
+                Console.WriteLine($"Player HP : {playerHp}");
             }
-            else if (action == 4)
+            else
             {
-                playerhp += chickenfireHP;
-                Console.WriteLine($"You ate a Chickenfire to regain health! Player HP: {playerhp}");
+                playerHp += friedChickenHeal;
 
-
-
-
-
-
+                Console.WriteLine("You eat Fried Chicken and recover health!");
+                Console.WriteLine($"Player HP : {playerHp}");
             }
+
+            Console.WriteLine("====================================");
+            Console.WriteLine("             TURN END");
+            Console.WriteLine("====================================");
+
+
+        
         }
     }
 
