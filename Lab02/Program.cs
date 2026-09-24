@@ -2,7 +2,7 @@
  * Student ID :1690704828
  * Name       :Lab02
  * Section    :129D
- * No.        :0
+ * No.        :30
  * Course     : GI113 Computer Programming (GI)
  */
 namespace Lab02
@@ -39,60 +39,71 @@ namespace Lab02
             Console.WriteLine($"Hp:{currentHp} / {maxHp}");
             hpPercent = currentHp * 100 / maxHp;
             Console.WriteLine($"HP percent: {hpPercent}%");
-            // Lab02 Part B
-            // unit 1 - Speed Type
-            string playerName = "Ashe";
-            int playerLevel = 6;
-            int playerMaxHp = 180;
-            int playerCurrentHp = 120;
-            float playerSpeed = 12.5f;
-            double playerDefense = 25.75;
+            // Lab02 Part B Abyss Hunter
 
-            Console.WriteLine("===== PLAYER 1: ASHE =====");
-            Console.WriteLine($"Name: {playerName}");
-            Console.WriteLine($"Level: {playerLevel}");
-            Console.WriteLine($"HP: {playerCurrentHp} / {playerMaxHp}");
-            Console.WriteLine($"Speed: {playerSpeed}");
-            Console.WriteLine($"Defense: {playerDefense}");
-            // unit 2 - Critical Type
-            string playerName2 = "Yaimak";
-            char playerRank2 = 'S';
-            int playerLevel2 = 999;
-            float playerAttackPower2 = 99.9f;
-            double playerCritMultiplier2 = 3.55;
+            // Charcter 1 /tor
+            string HunterName1 = "Tor";
+            int hunterlevel1 = 25;
+            float hunterAttackPower1 = 35.5f;
+            char hunterRank1 = 'A'; 
+            bool hunterAlive1 = true;
 
-            Console.WriteLine("===== PLAYER 2: YAIMAK =====");
-            Console.WriteLine($"Name: {playerName2}");
-            Console.WriteLine($"Rank: {playerRank2}");
-            Console.WriteLine($"Level: {playerLevel2}");
-            Console.WriteLine($"Attack Power: {playerAttackPower2}");
-            Console.WriteLine($"Crit Multiplier: {playerCritMultiplier2}");
-            // unit 3 - Tank Type
-            string playerName3 = "Rawhand";
-            int playerLevel3 = 7;
-            int playerMaxHp3 = 300;
-            float playerSpeed3 = 6.5f;
-            double playerDefense3 = 80.5;
+            Console.WriteLine("===== hunter 1: TOR =====");
+            Console.WriteLine($"Name : {HunterName1}");
+            Console.WriteLine($"Level: {hunterlevel1}");
+            Console.WriteLine($"Attack Power: {hunterAttackPower1}");
+            Console.WriteLine($"Rank: {hunterRank1}");
+            Console.WriteLine($"Alive: {hunterAlive1}");
 
-            Console.WriteLine("===== PLAYER 3: RAWHAND =====");
-            Console.WriteLine($"Name: {playerName3}");
-            Console.WriteLine($"Level: {playerLevel3}");
-            Console.WriteLine($"HP: {playerMaxHp3}");
-            Console.WriteLine($"Speed: {playerSpeed3}");
-            Console.WriteLine($"Defense: {playerDefense3}");
-            // unit 4 - Boss Type
-            string playerName4 = "Zedzeed";
-            char playerRank4 = 'S';
-            int playerBossPower4 = 500;
-            float playerAttackSpeed4 = 15.5f;
-            bool playerIsBoss4 = true;
 
-            Console.WriteLine("===== PLAYER 4: ZEDZEED =====");
-            Console.WriteLine($"Name: {playerName4}");
-            Console.WriteLine($"Rank: {playerRank4}");
-            Console.WriteLine($"Boss Power: {playerBossPower4}");
-            Console.WriteLine($"Attack Speed: {playerAttackSpeed4}");
-            Console.WriteLine($"Is Boss: {playerIsBoss4}");
+            // Charcter 2 - Mira
+            string HunterName2 = "Mira";
+            int hunterlevel2 = 23;
+            float hunterAttackPower2 = 32.0f;
+            char hunterRank2 = 'B';
+            bool hunterAlive2 = true;
+
+            Console.WriteLine("===== hunter 2: MIRA =====");
+            Console.WriteLine($"Name : {HunterName2}");
+            Console.WriteLine($"Level: {hunterlevel2}");
+            Console.WriteLine($"Attack Power: {hunterAttackPower2}");
+            Console.WriteLine($"Rank: {hunterRank2}");
+            Console.WriteLine($"Alive: {hunterAlive2}");
+
+
+            // Charcter 3 - Brakk
+            string HunterName3 = "Brakk";
+            int hunterlevel3 = 28;
+            float hunterAttackPower3 = 38.0f;
+            char hunterRank3 = 'S';
+            bool hunterAlive3 = true;
+
+            Console.WriteLine("===== hunter 3: BRAKK =====");
+            Console.WriteLine($"Name : {HunterName3}");
+            Console.WriteLine($"Level: {hunterlevel3}");
+            Console.WriteLine($"Attack Power: {hunterAttackPower3}");
+            Console.WriteLine($"Rank: {hunterRank3}");
+            Console.WriteLine($"Alive: {hunterAlive3}");
+            
+
+
+            // Charcter 4 - Mear
+            string HunterName4 = "Mear";
+            int hunterlevel4 = 27;
+            float hunterAttackPower4 = 36.0f;
+            char hunterRank4 = 'A';
+            bool hunterAlive4 = true;
+
+            Console.WriteLine("===== hunter 4: MEAR =====");
+            Console.WriteLine($"Name : {HunterName4}");
+            Console.WriteLine($"Level: {hunterlevel4}");
+            Console.WriteLine($"Attack Power: {hunterAttackPower4}");
+            Console.WriteLine($"Rank: {hunterRank4}");
+            Console.WriteLine($"Alive: {hunterAlive4}");
+
+
+
+
         }
     }
 }

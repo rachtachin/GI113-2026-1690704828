@@ -11,7 +11,7 @@ namespace Lab_06
     {
         static void Main(string[] args)
         {
-            //Game name The Demon Hunter VS Chicken
+            //Game name The Demon Hunter VS Chicken KFC
             int playerHp = 100;
             int enemyHp = 100;
             int knifeDamage = 25;
@@ -21,7 +21,7 @@ namespace Lab_06
 
 
             Console.WriteLine("====================================");
-            Console.WriteLine("       DEMON HUNTER VS CHICKEN");
+            Console.WriteLine("       DEMON HUNTER VS CHICKEN KFC");
             Console.WriteLine("====================================");
             Console.WriteLine($"Player HP : {playerHp}");
             Console.WriteLine($"Demon HP  : {enemyHp}");
@@ -29,7 +29,7 @@ namespace Lab_06
             Console.WriteLine("ACTION 1 : Attack Demon with Knife");
             Console.WriteLine("ACTION 2 : Attack Demon with Pistol");
             Console.WriteLine("ACTION 3 : Attack Chicken");
-            Console.WriteLine("ACTION 4 : Eat Chicken and Heal");
+            Console.WriteLine("ACTION 4 : Eat Fried  Chicken and Heal");
             Console.WriteLine("------------------------------------");
             Console.Write("Choose your action (1-4): ");
 
